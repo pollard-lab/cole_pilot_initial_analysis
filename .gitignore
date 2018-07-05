@@ -1,0 +1,13 @@
+*.fasta
+*.fa
+*.fsa
+*.sam
+*.bam
+*.gtf
+*.gff
+*.psl
+*.gz
+*.fastq
+*.fq
+*.fsq
+*bt2

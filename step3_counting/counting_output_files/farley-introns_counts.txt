@@ -1,0 +1,16 @@
+# Program:featureCounts v1.5.3; Command:"featureCounts" "-s" "1" "-t" "exon" "-g" "gene_name" "-M" "-a" "Farley_2017_TASL-introns_Ranges_forRNAi.gtf" "-o" "farley-introns_counts.txt" "/media/pollardlab/POLLARDLAB3/cole_pilot_initial_analysis/step2_alignment/Cole_Pilot_001_S5_R1_001_unique_and_all_MAC.sam" 
+Geneid	Chr	Start	End	Strand	Length	/media/pollardlab/POLLARDLAB3/cole_pilot_initial_analysis/step2_alignment/Cole_Pilot_001_S5_R1_001_unique_and_all_MAC.sam
+TASL_2-Intron:Plus_Strand	scf_8254370	141897	142031	+	135	0
+TASL_2-Intron:Minus_Strand	scf_8254370	141897	142031	-	135	0
+TASL_3-Intron:Plus_Strand	scf_8254594	261851	262043	+	193	0
+TASL_3-Intron:Minus_Strand	scf_8254594	261851	262043	-	193	0
+TASL_4-Intron_A:Plus_Strand	scf_8254597	5773	5828	+	56	0
+TASL_4-Intron_A:Minus_Strand	scf_8254597	5773	5828	-	56	0
+TASL_4-Intron_B:Plus_Strand	scf_8254597	4196	4247	+	52	0
+TASL_4-Intron_B:Minus_Strand	scf_8254597	4196	4247	-	52	0
+TASL_5-Intron:Plus_Strand	scf_8254638	467410	467443	+	34	0
+TASL_5-Intron:Minus_Strand	scf_8254638	467410	467443	-	34	0
+TASL_6-Intron_1_closetohair:Plus_Strand	scf_8254470	649347	649406	+	60	6
+TASL_6-Intron_1_closetohair:Minus_Strand	scf_8254470	649347	649406	-	60	0
+TASL_6-Intron_2_farfromhair:Plus_Strand	scf_8254470	648855	648907	+	53	0
+TASL_6-Intron_2_farfromhair:Minus_Strand	scf_8254470	648855	648907	-	53	0

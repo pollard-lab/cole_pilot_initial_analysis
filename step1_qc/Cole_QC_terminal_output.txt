@@ -1,0 +1,300 @@
+##### 3' Adapter Trimming #####
+This is cutadapt 1.16 with Python 2.7.12
+Command line parameters: -a GATCGGAA -o Cole_Pilot_001_S5_R1_001_adapterTrim.fastq Cole_Pilot_001_S5_R1_001.fastq
+Running on 1 core
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 2976.25 s (18 us/read; 3.28 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             162,716,562
+Reads with adapters:                84,645,168 (52.0%)
+Reads written (passing filters):   162,716,562 (100.0%)
+
+Total basepairs processed: 8,298,544,662 bp
+Total written (filtered):  7,231,147,991 bp (87.1%)
+
+=== Adapter 1 ===
+
+Sequence: GATCGGAA; Type: regular 3'; Length: 8; Trimmed: 84645168 times.
+
+No. of allowed errors:
+0-8 bp: 0
+
+Bases preceding removed adapters:
+  A: 80.7%
+  C: 0.1%
+  G: 0.4%
+  T: 18.8%
+  none/other: 0.0%
+WARNING:
+    The adapter is preceded by "A" extremely often.
+    The provided adapter sequence may be incomplete.
+    To fix the problem, add "A" to the beginning of the adapter sequence.
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	17515550	2542446.3	0	17515550
+4	1861388	635611.6	0	1861388
+5	2104640	158902.9	0	2104640
+6	1676842	39725.7	0	1676842
+7	2344762	9931.4	0	2344762
+8	2305646	2482.9	0	2305646
+9	3663521	2482.9	0	3663521
+10	2485209	2482.9	0	2485209
+11	2572981	2482.9	0	2572981
+12	3870867	2482.9	0	3870867
+13	3455591	2482.9	0	3455591
+14	3188910	2482.9	0	3188910
+15	3532253	2482.9	0	3532253
+16	3871089	2482.9	0	3871089
+17	3827687	2482.9	0	3827687
+18	4472312	2482.9	0	4472312
+19	5565583	2482.9	0	5565583
+20	4244873	2482.9	0	4244873
+21	4005548	2482.9	0	4005548
+22	2814421	2482.9	0	2814421
+23	1675713	2482.9	0	1675713
+24	1382555	2482.9	0	1382555
+25	1068967	2482.9	0	1068967
+26	442607	2482.9	0	442607
+27	152728	2482.9	0	152728
+28	52968	2482.9	0	52968
+29	22652	2482.9	0	22652
+30	14389	2482.9	0	14389
+31	34844	2482.9	0	34844
+32	57169	2482.9	0	57169
+33	190811	2482.9	0	190811
+34	65866	2482.9	0	65866
+35	14405	2482.9	0	14405
+36	3836	2482.9	0	3836
+37	1675	2482.9	0	1675
+38	1462	2482.9	0	1462
+39	3654	2482.9	0	3654
+40	1039	2482.9	0	1039
+41	812	2482.9	0	812
+42	619	2482.9	0	619
+43	712	2482.9	0	712
+44	2431	2482.9	0	2431
+45	4325	2482.9	0	4325
+46	40578	2482.9	0	40578
+47	28192	2482.9	0	28192
+48	123	2482.9	0	123
+49	334	2482.9	0	334
+50	20	2482.9	0	20
+51	9	2482.9	0	9
+
+WARNING:
+    One or more of your adapter sequences may be incomplete.
+    Please see the detailed output above.
+Started analysis of Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 5% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 10% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 15% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 20% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 25% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 30% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 35% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 40% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 45% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 50% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 55% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 60% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 65% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 70% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 75% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 80% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 85% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 90% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Approx 95% complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Analysis complete for Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+
+
+
+##### 3' PolyA Removal #####
+This is cutadapt 1.16 with Python 2.7.12
+Command line parameters: -a AAAAAAAAAA -o Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq Cole_Pilot_001_S5_R1_001_adapterTrim.fastq
+Running on 1 core
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 2440.69 s (15 us/read; 4.00 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             162,716,562
+Reads with adapters:               116,518,846 (71.6%)
+Reads written (passing filters):   162,716,562 (100.0%)
+
+Total basepairs processed: 7,231,147,991 bp
+Total written (filtered):  5,161,233,897 bp (71.4%)
+
+=== Adapter 1 ===
+
+Sequence: AAAAAAAAAA; Type: regular 3'; Length: 10; Trimmed: 116518846 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10 bp: 1
+
+Bases preceding removed adapters:
+  A: 0.0%
+  C: 45.8%
+  G: 42.7%
+  T: 11.4%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	2715314	2542446.3	0	2715314
+4	1109908	635611.6	0	1109908
+5	851382	158902.9	0	851382
+6	665546	39725.7	0	665546
+7	686775	9931.4	0	686775
+8	891117	2482.9	0	891117
+9	958694	620.7	0	958694
+10	1227877	155.2	1	1008713 219164
+11	2449632	155.2	1	2220766 228866
+12	1763872	155.2	1	1689081 74791
+13	3695630	155.2	1	3673860 21770
+14	13450268	155.2	1	13414110 36158
+15	48671181	155.2	1	48562716 108465
+16	8455933	155.2	1	8411363 44570
+17	3133171	155.2	1	3106828 26343
+18	531729	155.2	1	517663 14066
+19	534267	155.2	1	522744 11523
+20	451384	155.2	1	442763 8621
+21	474667	155.2	1	467912 6755
+22	679531	155.2	1	671848 7683
+23	671462	155.2	1	659707 11755
+24	1133702	155.2	1	1125742 7960
+25	736970	155.2	1	725650 11320
+26	698612	155.2	1	688701 9911
+27	1199143	155.2	1	1189605 9538
+28	946697	155.2	1	936441 10256
+29	914515	155.2	1	898790 15725
+30	1142709	155.2	1	1134231 8478
+31	1549357	155.2	1	1541407 7950
+32	1313465	155.2	1	1303028 10437
+33	1542164	155.2	1	1529177 12987
+34	2213146	155.2	1	2200815 12331
+35	1527677	155.2	1	1515309 12368
+36	2059591	155.2	1	2033426 26165
+37	1372652	155.2	1	1352905 19747
+38	987761	155.2	1	969850 17911
+39	935045	155.2	1	920916 14129
+40	742255	155.2	1	678252 64003
+41	378249	155.2	1	348578 29671
+42	215734	155.2	1	205550 10184
+43	261995	155.2	1	254235 7760
+44	162638	155.2	1	152483 10155
+45	108597	155.2	1	99472 9125
+46	121596	155.2	1	111506 10090
+47	109675	155.2	1	89855 19820
+48	68277	155.2	1	60693 7584
+49	6545	155.2	1	5804 741
+50	614	155.2	1	606 8
+51	125	155.2	1	109 16
+
+Started analysis of Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 5% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 10% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 15% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 20% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 25% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 30% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 35% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 40% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 45% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 50% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 55% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 60% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 65% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 70% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 75% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 80% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 85% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 90% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Approx 95% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Analysis complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+
+
+
+##### 3' Quality Removal #####
+This is cutadapt 1.16 with Python 2.7.12
+Command line parameters: -q 10 -o Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim.fastq
+Running on 1 core
+Trimming 0 adapters with at most 10.0% errors in single-end mode ...
+Finished in 1359.69 s (8 us/read; 7.18 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             162,716,562
+Reads with adapters:                         0 (0.0%)
+Reads written (passing filters):   162,716,562 (100.0%)
+
+Total basepairs processed: 5,161,233,897 bp
+Quality-trimmed:                  91,210 bp (0.0%)
+Total written (filtered):  5,161,142,687 bp (100.0%)
+
+Started analysis of Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 5% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 10% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 15% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 20% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 25% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 30% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 35% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 40% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 45% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 50% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 55% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 60% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 65% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 70% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 75% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 80% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 85% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 90% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Approx 95% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Analysis complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+
+
+
+##### 5' Three nts Removal, Length Filtering #####
+This is cutadapt 1.16 with Python 2.7.12
+Command line parameters: -u 3 -m 15 -o Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim.fastq
+Running on 1 core
+Trimming 0 adapters with at most 10.0% errors in single-end mode ...
+Finished in 1496.88 s (9 us/read; 6.52 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             162,716,562
+Reads with adapters:                         0 (0.0%)
+Reads that were too short:          32,684,637 (20.1%)
+Reads written (passing filters):   130,031,925 (79.9%)
+
+Total basepairs processed: 5,161,142,687 bp
+Total written (filtered):  4,300,249,701 bp (83.3%)
+
+Started analysis of Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 5% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 10% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 15% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 20% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 25% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 30% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 35% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 40% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 45% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 50% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 55% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 60% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 65% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 70% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 75% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 80% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 85% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 90% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Approx 95% complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+Analysis complete for Cole_Pilot_001_S5_R1_001_adapterTrim_polyATrim_qualityTrim_frontTrim_lenFilter.fastq
+
+Script Done.

@@ -1,0 +1,126 @@
+#R version 3.4.4 
+require(ggplot2)
+
+setwd("/media/pollardlab/POLLARDLAB3/cole_pilot_initial_analysis/step4_final_results")
+
+# Enrichment Analysis------------------------------------------------------------------------------------
+# import data and organize table
+input_countdata <- read.table("/media/pollardlab/POLLARDLAB3/cole_pilot_initial_analysis/step3_counting/counting_output_files/combined_counts_with_multi.txt", header=TRUE, row.names=1)  # load count data
+countdata_subset_custom_annotations <- subset(data.frame(input_countdata), grepl(":", rownames(input_countdata)))  # make a subset of the countdata table with only the custom annotations (annnotaions that presumably lead to sRNA precursors)
+
+# get the number of reads mapped to custom annotations (in reads, integers)
+N_total_counts_to_MAC = sum(input_countdata$X.media.pollardlab.POLLARDLAB3.cole_pilot_initial_analysis.step2_alignment.Cole_Pilot_001_S5_R1_001_unique_and_all_MAC.sam)
+n_counts_custom_annotations = sum(countdata_subset_custom_annotations$X.media.pollardlab.POLLARDLAB3.cole_pilot_initial_analysis.step2_alignment.Cole_Pilot_001_S5_R1_001_unique_and_all_MAC.sam)
+
+# get the lengths (in nts, integers)
+sum_length_of_custom_anotations = sum(countdata_subset_custom_annotations$Length)/2  # every custom annotation has a plus and a minus strand reported
+sum_length_of_transcriptome = sum(input_countdata$Length) - sum_length_of_custom_anotations  # subtract as the input_countdata has both the plus and minus annotations
+
+# get the proportions of the genome corresponding to the custom annotations
+l_length_proportion_custom_annotations = sum_length_of_custom_anotations/sum_length_of_transcriptome
+
+# print results
+expected_value <- N_total_counts_to_MAC * l_length_proportion_custom_annotations
+print(paste("Observed Counts for Custom Annotations =", n_counts_custom_annotations))
+print(paste("Expected Counts for Custom Annotations =", expected_value))
+print(paste("Fold Enrichment =", n_counts_custom_annotations / expected_value))
+
+
+#Generating Read Mapping Pie Chart-------------------------------------------------------------------------------
+# list number of reads from alignment reports (see step 2)
+num_of_reads_after_qc <- 130031925
+num_of_mapped_MAC_unique_total <- 39935535
+num_of_mapped_MAC_multi_total <- 1011920
+num_of_mapped_MAC_unique_specific <- 38977414
+num_of_mapped_MAC_multi_specific <- 274386
+num_of_mapped_MIC_unique_total <- 2154272
+num_of_mapped_MIC_multi_total <- 861142
+num_of_mapped_MIC_unique_specific <- 1117275
+num_of_mapped_MIC_multi_specific <- 202484
+num_of_nonmappers <- 87764711
+
+# calculate the number of reads (unique or multimappers) that aligned to both MAC and MIC
+num_of_mapped_MAC_and_MIC <- abs(num_of_mapped_MAC_unique_total - num_of_mapped_MAC_unique_specific) + abs(num_of_mapped_MAC_multi_total - num_of_mapped_MAC_multi_specific)
+
+# place values of interst into data frame
+df_all_reads <- data.frame(groups = c("MAC uniquely mapped reads", "MAC multi-mapped reads", "MIC uniquely mapped reads", "MIC multi-mapped reads","MAC and MIC (unique and multimappers)", "unmapped reads"),
+                 number_of_reads = c(num_of_mapped_MAC_unique_specific,num_of_mapped_MAC_multi_specific,num_of_mapped_MIC_unique_specific,num_of_mapped_MIC_multi_specific,num_of_mapped_MAC_and_MIC,num_of_nonmappers))
+
+# calculate the percentages for each group
+read_percentages <- paste(c(df_all_reads$number_of_reads/sum(df_all_reads$number_of_reads))*100)
+read_percentages <- paste0(substr(read_percentages, 1,5),"%")
+
+df_all_reads$groups <- paste(df_all_reads$groups, read_percentages, sep=", ")
+
+# set to order of the dataframe so the pie chart reads in the correct order
+df_all_reads$groups <- factor(df_all_reads$groups, levels = df_all_reads$groups)
+
+# making pie chart
+blank_theme <- theme_minimal()+
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    panel.grid=element_blank(),
+    axis.ticks = element_blank(),
+    plot.title=element_text(size=16, face="bold",hjust =2))
+
+read_mapping_pie_chart <- ggplot(df_all_reads, aes(x="", y=number_of_reads, fill=groups))+
+  geom_bar(width = 1, stat = "identity") + 
+  coord_polar("y", start=0) +
+  scale_fill_manual(values=c( "blue", "steelblue1","red","tomato","darkolivegreen3","gray")) +
+  blank_theme +
+  theme(axis.text.x=element_blank()) +
+  ggtitle("Mapping percentages of all reads") + 
+  labs(fill="") +  
+  theme(legend.text=element_text(size=12))
+  
+read_mapping_pie_chart
+
+# png(filename="Mapping percentages of all reads.png")
+# plot(read_mapping_pie_chart)
+# dev.off()
+
+#Generating Read Counting Pie Chart----------------------------------------------------------------------------------------------
+#list numbers from counting reports (see step 3)
+total_num_of_genomic_mappings <- 74818424  # as determined by 'flagstat_terminal_output.txt' (not all mappings are counted)
+
+num_of_counts_MAC_custom_annotations <- n_counts_custom_annotations
+num_of_counts_MAC_other_annotations <- N_total_counts_to_MAC - n_counts_custom_annotations
+num_of_counts_MAC_no_annotations <- total_num_of_genomic_mappings - N_total_counts_to_MAC
+
+# place values of interst into data frame
+df_all_counts <- data.frame(groups = c("MAC custom annotation counts", "MAC other gene counts (TTHERMs)", "No MAC annotation present"),
+                           number_of_counts = c(num_of_counts_MAC_custom_annotations,num_of_counts_MAC_other_annotations,num_of_counts_MAC_no_annotations))
+
+count_percentages <- paste(c(df_all_counts$number_of_counts/sum(df_all_counts$number_of_counts))*100)
+count_percentages <- paste0(substr(count_percentages, 1,5),"%")
+
+df_all_counts$groups <- paste(df_all_counts$groups, count_percentages, sep=", ")
+
+# set to order of the dataframe so the pie chart reads in the correct order
+df_all_counts$groups <- factor(df_all_counts$groups, levels = df_all_counts$groups)
+
+# making pie chart
+blank_theme <- theme_minimal()+
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    panel.grid=element_blank(),
+    axis.ticks = element_blank(),
+    plot.title=element_text(size=16, face="bold",hjust =-4))
+
+read_counting_pie_chart <- ggplot(df_all_counts, aes(x="", y=number_of_counts, fill=groups))+
+  geom_bar(width = 1, stat = "identity") + 
+  coord_polar("y", start=0) +
+  scale_fill_manual(values=c( "blue", "red", "gray")) +
+  blank_theme +
+  theme(axis.text.x=element_blank()) +
+  ggtitle("Counting percentages for all MAC mapped reads") + 
+  labs(fill="") +
+  theme(legend.text=element_text(size=12))
+
+read_counting_pie_chart
+
+# png(filename="Counting percentages for all MAC mapped reads.png")
+# plot(read_counting_pie_chart)
+# dev.off()

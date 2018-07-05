@@ -1,0 +1,248 @@
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 SAM file                                       ||
+||                           S /media/pollardlab/POLLARDLAB3/cole_pilot_i ... ||
+||                                                                            ||
+||             Output file : couvillion_counts.txt                            ||
+||                 Summary : couvillion_counts.txt.summary                    ||
+||              Annotation : Couvillion_sRNA_Precursor_Annotations_2014up ... ||
+||      Dir for temp files : ./                                               ||
+||                                                                            ||
+||                 Threads : 1                                                ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : no                                               ||
+||         Strand specific : stranded                                         ||
+||      Multimapping reads : counted                                          ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file Couvillion_sRNA_Precursor_Annotations_2014updated ... ||
+||    Features : 76                                                           ||
+||    Meta-features : 75                                                      ||
+||    Chromosomes/contigs : 36                                                ||
+||                                                                            ||
+|| Process SAM file /media/pollardlab/POLLARDLAB3/cole_pilot_initial_anal ... ||
+||    Single-end reads are included.                                          ||
+||    Assign reads to features...                                             ||
+||    Total reads : 163902894                                                 ||
+||    Successfully assigned reads : 431031 (0.3%)                             ||
+||    Running time : 16.25 minutes                                            ||
+||                                                                            ||
+||                         Read assignment finished.                          ||
+||                                                                            ||
+|| Summary of counting results can be found in file "couvillion_counts.txt"   ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 SAM file                                       ||
+||                           S /media/pollardlab/POLLARDLAB3/cole_pilot_i ... ||
+||                                                                            ||
+||             Output file : farley-introns_counts.txt                        ||
+||                 Summary : farley-introns_counts.txt.summary                ||
+||              Annotation : Farley_2017_TASL-introns_Ranges_forRNAi.gtf  ... ||
+||      Dir for temp files : ./                                               ||
+||                                                                            ||
+||                 Threads : 1                                                ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : no                                               ||
+||         Strand specific : stranded                                         ||
+||      Multimapping reads : counted                                          ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file Farley_2017_TASL-introns_Ranges_forRNAi.gtf ...       ||
+||    Features : 14                                                           ||
+||    Meta-features : 14                                                      ||
+||    Chromosomes/contigs : 5                                                 ||
+||                                                                            ||
+|| Process SAM file /media/pollardlab/POLLARDLAB3/cole_pilot_initial_anal ... ||
+||    Single-end reads are included.                                          ||
+||    Assign reads to features...                                             ||
+||    Total reads : 163902894                                                 ||
+||    Successfully assigned reads : 6 (0.0%)                                  ||
+||    Running time : 16.27 minutes                                            ||
+||                                                                            ||
+||                         Read assignment finished.                          ||
+||                                                                            ||
+|| Summary of counting results can be found in file "farley-introns_counts.t  ||
+|| xt"                                                                        ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 SAM file                                       ||
+||                           S /media/pollardlab/POLLARDLAB3/cole_pilot_i ... ||
+||                                                                            ||
+||             Output file : farley_counts.txt                                ||
+||                 Summary : farley_counts.txt.summary                        ||
+||              Annotation : Farley_2017_TASL_Ranges_forRNAi.gtf (GTF)        ||
+||      Dir for temp files : ./                                               ||
+||                                                                            ||
+||                 Threads : 1                                                ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : no                                               ||
+||         Strand specific : stranded                                         ||
+||      Multimapping reads : counted                                          ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file Farley_2017_TASL_Ranges_forRNAi.gtf ...               ||
+||    Features : 42                                                           ||
+||    Meta-features : 42                                                      ||
+||    Chromosomes/contigs : 20                                                ||
+||                                                                            ||
+|| Process SAM file /media/pollardlab/POLLARDLAB3/cole_pilot_initial_anal ... ||
+||    Single-end reads are included.                                          ||
+||    Assign reads to features...                                             ||
+||    Total reads : 163902894                                                 ||
+||    Successfully assigned reads : 60271 (0.0%)                              ||
+||    Running time : 16.21 minutes                                            ||
+||                                                                            ||
+||                         Read assignment finished.                          ||
+||                                                                            ||
+|| Summary of counting results can be found in file "farley_counts.txt"       ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 SAM file                                       ||
+||                           S /media/pollardlab/POLLARDLAB3/cole_pilot_i ... ||
+||                                                                            ||
+||             Output file : couvillion-potential_counts.txt                  ||
+||                 Summary : couvillion-potential_counts.txt.summary          ||
+||              Annotation : POTENTIAL_Couvillion_sRNA_Precursor_Annotati ... ||
+||      Dir for temp files : ./                                               ||
+||                                                                            ||
+||                 Threads : 1                                                ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : no                                               ||
+||         Strand specific : stranded                                         ||
+||      Multimapping reads : counted                                          ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file POTENTIAL_Couvillion_sRNA_Precursor_Annotations_2 ... ||
+||    Features : 64                                                           ||
+||    Meta-features : 64                                                      ||
+||    Chromosomes/contigs : 26                                                ||
+||                                                                            ||
+|| Process SAM file /media/pollardlab/POLLARDLAB3/cole_pilot_initial_anal ... ||
+||    Single-end reads are included.                                          ||
+||    Assign reads to features...                                             ||
+||    Total reads : 163902894                                                 ||
+||    Successfully assigned reads : 349720 (0.2%)                             ||
+||    Running time : 16.13 minutes                                            ||
+||                                                                            ||
+||                         Read assignment finished.                          ||
+||                                                                            ||
+|| Summary of counting results can be found in file "couvillion-potential_co  ||
+|| unts.txt"                                                                  ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 SAM file                                       ||
+||                           S /media/pollardlab/POLLARDLAB3/cole_pilot_i ... ||
+||                                                                            ||
+||             Output file : transcriptome_counts.txt                         ||
+||                 Summary : transcriptome_counts.txt.summary                 ||
+||              Annotation : TetGenomeRef.gtf (GTF)                           ||
+||      Dir for temp files : ./                                               ||
+||                                                                            ||
+||                 Threads : 1                                                ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : no                                               ||
+||         Strand specific : stranded                                         ||
+||      Multimapping reads : counted                                          ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file TetGenomeRef.gtf ...                                  ||
+||    Features : 121018                                                       ||
+||    Meta-features : 26996                                                   ||
+||    Chromosomes/contigs : 857                                               ||
+||                                                                            ||
+|| Process SAM file /media/pollardlab/POLLARDLAB3/cole_pilot_initial_anal ... ||
+||    Single-end reads are included.                                          ||
+||    Assign reads to features...                                             ||
+||    Total reads : 163902894                                                 ||
+||    Successfully assigned reads : 3639929 (2.2%)                            ||
+||    Running time : 16.15 minutes                                            ||
+||                                                                            ||
+||                         Read assignment finished.                          ||
+||                                                                            ||
+|| Summary of counting results can be found in file "transcriptome_counts.tx  ||
+|| t"                                                                         ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
