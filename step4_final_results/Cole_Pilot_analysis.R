@@ -9,21 +9,32 @@ input_countdata <- read.table("/media/pollardlab/POLLARDLAB3/cole_pilot_initial_
 countdata_subset_custom_annotations <- subset(data.frame(input_countdata), grepl(":", rownames(input_countdata)))  # make a subset of the countdata table with only the custom annotations (annnotaions that presumably lead to sRNA precursors)
 
 # get the number of reads mapped to custom annotations (in reads, integers)
-N_total_counts_to_MAC = sum(input_countdata$X.media.pollardlab.POLLARDLAB3.cole_pilot_initial_analysis.step2_alignment.Cole_Pilot_001_S5_R1_001_unique_and_all_MAC.sam)
-n_counts_custom_annotations = sum(countdata_subset_custom_annotations$X.media.pollardlab.POLLARDLAB3.cole_pilot_initial_analysis.step2_alignment.Cole_Pilot_001_S5_R1_001_unique_and_all_MAC.sam)
+N_total_counts_to_MAC <- sum(input_countdata$X.media.pollardlab.POLLARDLAB3.cole_pilot_initial_analysis.step2_alignment.Cole_Pilot_001_S5_R1_001_unique_and_all_MAC.sam)
+n_counts_custom_annotations <- sum(countdata_subset_custom_annotations$X.media.pollardlab.POLLARDLAB3.cole_pilot_initial_analysis.step2_alignment.Cole_Pilot_001_S5_R1_001_unique_and_all_MAC.sam)
+n_counts_gene_annotations <- N_total_counts_to_MAC - n_counts_custom_annotations
 
 # get the lengths (in nts, integers)
-sum_length_of_custom_anotations = sum(countdata_subset_custom_annotations$Length)/2  # every custom annotation has a plus and a minus strand reported
-sum_length_of_transcriptome = sum(input_countdata$Length) - sum_length_of_custom_anotations  # subtract as the input_countdata has both the plus and minus annotations
+sum_length_of_custom_anotations <- sum(countdata_subset_custom_annotations$Length)
+sum_length_of_transcriptome <- sum(input_countdata$Length)
+sum_length_of_gene_annotations <- sum_length_of_transcriptome - sum_length_of_custom_anotations
 
 # get the proportions of the genome corresponding to the custom annotations
-l_length_proportion_custom_annotations = sum_length_of_custom_anotations/sum_length_of_transcriptome
+l_length_proportion_custom_annotations <- sum_length_of_custom_anotations / sum_length_of_transcriptome
+l_length_proportion_gene_annotations <- sum_length_of_gene_annotations / sum_length_of_transcriptome
 
-# print results
-expected_value <- N_total_counts_to_MAC * l_length_proportion_custom_annotations
+# calculate expected numer of counts
+expected_value_custom_annotations <- N_total_counts_to_MAC * l_length_proportion_custom_annotations
+expected_value_gene_annotations <- N_total_counts_to_MAC * l_length_proportion_gene_annotations
+
+# print results for custom annotations
 print(paste("Observed Counts for Custom Annotations =", n_counts_custom_annotations))
-print(paste("Expected Counts for Custom Annotations =", expected_value))
-print(paste("Fold Enrichment =", n_counts_custom_annotations / expected_value))
+print(paste("Expected Counts for Custom Annotations =", expected_value_custom_annotations))
+print(paste("Fold Enrichment for Custom Annotations =", n_counts_custom_annotations / expected_value_custom_annotations))
+
+# print results for gene annotations
+print(paste("Observed Counts for gene Annotations(TTHERMs) =", n_counts_gene_annotations))
+print(paste("Expected Counts for gene Annotations(TTHERMs) =", expected_value_gene_annotations))
+print(paste("Fold Enrichment for gene Annotations(TTHERMs) =", n_counts_gene_annotations / expected_value_gene_annotations))
 
 
 #Generating Read Mapping Pie Chart-------------------------------------------------------------------------------
